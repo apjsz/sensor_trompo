@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/initDataFragment">
+
+    <fragment
+        android:id="@+id/initDataFragment"
+        android:name="ar.com.dtfnet.concretesensor.InitDataFragment"
+        android:label="fragment_init_data"
+        tools:layout="@layout/fragment_init_data" >
+        <action
+            android:id="@+id/action_initDataFragment_to_setupDataFragment"
+            app:destination="@id/setupDataFragment" />
+        <action
+            android:id="@+id/action_initDataFragment_to_measuredDataFragment"
+            app:destination="@id/measuredDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupDataFragment"
+        android:name="ar.com.dtfnet.concretesensor.SetupDataFragment"
+        android:label="fragment_setup_data"
+        tools:layout="@layout/fragment_setup_data" >
+        <action
+            android:id="@+id/action_setupDataFragment_to_measuredDataFragment"
+            app:destination="@id/measuredDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/measuredDataFragment"
+        android:name="ar.com.dtfnet.concretesensor.MeasuredDataFragment"
+        android:label="fragment_measured_data"
+        tools:layout="@layout/fragment_measured_data" />
+</navigation>
